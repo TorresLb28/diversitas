@@ -23,26 +23,23 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
 <Base title={postIndex?.data.title}>
-  <section class="section">
+
+  <section class="section" >
     <div class="container">
-      <h1
-        class="text-center font-normal lg:text-[56px]"
-        set:html={markdownify(postIndex?.data.title)}
-      />
+      <h1 style="text-align: center; margin-top: 25px">Cursos</h1>
       <div class="row pb-12">
         <div class="row col-12 pb-24 pt-16">
           <div class="md:col-6">
-            {
-              currentPosts[0].data.image && (
-                <Image
-                  class="rounded-lg"
-                  src={currentPosts[0].data.image}
-                  alt={currentPosts[0].data.title}
-                  width={925}
-                  height={475}
-                />
-              )
-            }
+            {currentPosts[0].data.image && (
+              <Image
+                style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+                class="rounded-lg"
+                src="/images/diverCursos.jpg"
+                alt="imagen de curso"
+                width={525}
+                height={275}
+              />
+            )}
           </div>
           <div class="md:col-6">
             <h2 class="h3 mb-2 mt-4">
@@ -50,34 +47,44 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
                 href={`/${blog_folder}/${currentPosts[0].slug}`}
                 class="block hover:text-primary"
               >
-                {currentPosts[0].data.title}
+                Cursos de lenguas extranjeras:
               </a>
             </h2>
-            <p
-              set:html={plainify(currentPosts[0].body.slice(0, summary_length))}
-            />
+            <p style="text-align: justify; font-size: 1.2em; font-weight: bold;">
+              Cada uno de nuestros cursos está diseñado para ofrecer una experiencia de aprendizaje enriquecedora, combinando teoría con prácticas interactivas y casos reales. Nuestro objetivo es que no solo adquieras nuevos conocimientos, sino que también desarrolles una apreciación profunda por la diversidad que nos rodea.
+            </p>
+            <br />
+            <p style="text-align: justify; font-size: 1.2em;">
+              ¡Únete a nosotros en Diversitas y da el primer paso hacia un mundo más diverso, inclusivo y conectado!
+            </p>
             <a
               class="btn btn-primary mt-4"
               href={`/${blog_folder}/${currentPosts[0].slug}`}
               rel=""
             >
-              Read More
+              Saber Más
             </a>
           </div>
         </div>
-        {
-          currentPosts.slice(1).map((post) => (
-            <div class="col-12 mb-8 sm:col-6 lg:col-4">
-              <Post post={post} />
-            </div>
-          ))
-        }
+        <h1 id="cursoextra"></h1>
+        <h1 style="text-align: center; margin-top: 100px; margin-bottom: 50px;">
+          Cursos en el Extranjero
+        </h1>
+        {currentPosts.slice(1).map((post) => (
+          <div class="col-12 mb-8 sm:col-6 lg:col-4">
+            <Post post={post} />
+          </div>
+        ))}
       </div>
+      <!--Esta parte es para que puedas cambiar de página en un futuro para que sea de noticias-->
+      <!--
       <Pagination
         section={blog_folder}
         currentPage={1}
         totalPages={totalPages}
       />
+      -->
     </div>
   </section>
 </Base>
+

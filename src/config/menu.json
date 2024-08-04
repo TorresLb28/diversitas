@@ -1,74 +1,71 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Inicio",
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "Nosotros",
+      "url": "/#nosotros"
+    },
+    {
+      "name": "¿Quiénes somos?",
+      "url": "/#quiensomos"
+    },
+    {
+      "name": "Cursos",
       "url": "/blog"
     },
     {
-      "name": "Pricing",
-      "url": "/pricing"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "url": "/faq"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Cursos Extranjero",
+      "url": "/blog#cursoextra"
     }
   ],
+  
   "footer": [
     {
-      "name": "Company",
+      "name": "",
       "menu": [
         {
-          "text": "Pricing",
+          "text": "",
           "url": "/pricing"
         },
         {
-          "text": "Quick Start",
+          "text": "",
           "url": "#"
         }
       ]
     },
     {
-      "name": "Product",
+      "name": "",
       "menu": [
         {
-          "text": "Features",
+          "text": "",
           "url": "#"
         },
         {
-          "text": "Platform",
+          "text": "",
           "url": "#"
         },
         {
-          "text": "Pricing",
+          "text": "",
           "url": "/pricing"
         }
       ]
     },
     {
-      "name": "Support",
+      "name": "",
       "menu": [
         {
-          "text": "FAQ",
+          "text": "",
           "url": "/faq"
         },
         {
-          "text": "Privacy Policy",
+          "text": "",
           "url": "/privacy-policy"
         },
         {
-          "text": "Terms & Conditions",
+          "text": "",
           "url": "/terms-conditions"
         }
       ]

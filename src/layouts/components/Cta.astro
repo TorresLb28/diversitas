@@ -11,14 +11,14 @@ const { cta } = Astro.props;
       <div class="md:col-5 lg:col-4">
         <Image
           class="w-full"
-          src={cta?.image}
+          src="/images/diverFoto2.png"
           alt="call to action image"
           width={325}
           height={206}
         />
       </div>
       <div class="mt-5 text-center md:mt-0 md:text-left md:col-6 lg:col-5">
-        <h2>{cta?.title}</h2>
+        <h2>PRUEBA</h2>
         <p class="mt-6" set:html={markdownify(cta?.content)} />
         {
           cta.button.enable && (

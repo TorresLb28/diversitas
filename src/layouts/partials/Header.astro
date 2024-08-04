@@ -19,12 +19,30 @@ export interface NavigationLink {
 
 const { main }: { main: NavigationLink[] } = menu;
 ---
+<!-- navbar estatica -->
+ 
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content {
+    margin-top: 70px; /* Ajusta este valor según la altura de tu navbar */
+  }
+  </style>
 
 <header class="header">
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
-      <Logo />
+      <a href="/">
+        <img src="/images/diversitaslogov2.png" alt="Descripción de la imagen" style="width:200px;height:70px;">
+      </a> 
     </div>
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
@@ -115,9 +133,9 @@ const { main }: { main: NavigationLink[] } = menu;
         <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 md:flex md:min-w-[150px] lg:min-w-[200px]">
           <a
             class="btn btn-primary z-0 ml-auto py-[14px]"
-            href={nav_button.link}
+            href="/contact"
           >
-            {nav_button.label}
+            Contáctanos
           </a>
         </div>
       )

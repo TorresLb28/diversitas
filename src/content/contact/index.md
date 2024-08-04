@@ -1,9 +1,9 @@
 ---
-title: "Contact Us"
+title: "Contactanos"
 draft: false
 info: 
-  title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  title: ¿Por qué deberías de contactarnos?
+  description: En Diversitas, creemos que la diversidad es la esencia de la riqueza cultural y social de nuestro mundo. Al contactarnos, podrás
   contacts: 
     - "phone: +88 125 256 452"
     - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"

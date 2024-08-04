@@ -12,7 +12,8 @@ const { title, description, info } = entry?.data;
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
-      <h1 class="text-center font-normal" set:html={markdownify(title)} />
+      /<!--class="text-center font-normal -->
+      <h1 style="text-align: center;"> Contáctanos </h1>
       <div class="section row pb-0">
         <div class="col-12 md:col-6 lg:col-7">
           <form class="contact-form" method="POST" action={contact_form_action}>
@@ -21,7 +22,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="name"
                 type="text"
-                placeholder="Name"
+                placeholder="Nombre / Name"
                 required
               />
             </div>
@@ -30,7 +31,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="email"
                 type="email"
-                placeholder="Your email"
+                placeholder="Tu correo electronico / Your email"
                 required
               />
             </div>
@@ -39,7 +40,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="subject"
                 type="text"
-                placeholder="Subject"
+                placeholder="Asunto / Subject"
                 required
               />
             </div>
@@ -47,22 +48,37 @@ const { title, description, info } = entry?.data;
               <textarea
                 class="form-textarea w-full rounded-md"
                 rows="7"
-                placeholder="Your message"></textarea>
+                placeholder="Tu pregunta o mensaje / Your question or message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary"> Send Now</button>
+            <button type="submit" class="btn btn-primary"> Envíar </button>
           </form>
         </div>
         <div class="content col-12 md:col-6 lg:col-5">
-          <h4 set:html={markdownify(info?.title)} />
-          <p class="mt-4" set:html={markdownify(info?.description)} />
-          <ul class="contact-list mt-5 list-none pl-0">
-            {
-              info?.contacts?.map((contact: string) => (
-                <li>
-                  <strong class="text-dark" set:html={markdownify(contact)} />
-                </li>
-              ))
-            }
+          <h4 style="text-align: center;">¿Por qué deberías de contactarnos?</h4>
+          <p style="text-align: justify;">En Diversitas, creemos que la diversidad es la esencia de la riqueza cultural y social de nuestro mundo. Al contactarnos, podrás:</p>
+          <ul class="contact-list mt-5 list-none pl-0" style="text-align: justify;">
+            <li>
+              <strong class="text-dark">Ampliar tus horizontes:</strong> Descubre nuevas culturas, idiomas y perspectivas que te enriquecerán personalmente y profesionalmente.
+          </li>
+          <li>
+          <li>
+              <strong class="text-dark">Participar en experiencias únicas:</strong> Únete a nuestros programas de aprendizaje y viajes diseñados para sumergirte en la diversidad cultural de diferentes regiones del mundo.
+          </li>
+          </ul>
+          <h4 style="text-align: center;">Formas de contactarnos</h4>
+          <ul class="contact-list mt-5 list-none pl-0" style="text-align: justify;">
+            <li>
+              <strong class="text-dark">Responsable de Información General:</strong> Paulo Balderas S.
+            </li>
+            <li>
+              <strong class="text-dark">Cordinadora General de Diversitas:</strong> Patricia Balderas R.
+            </li>
+            <li>
+              <strong class="text-dark">Telefono/WhatsApp:</strong> (+52) 222 410 3601
+            </li>
+            <li>
+            <strong class="text-dark">Correo:</strong> patobalro@gamil.com
+            </li>
           </ul>
         </div>
       </div>
