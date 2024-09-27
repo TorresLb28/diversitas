@@ -1,7 +1,7 @@
 ---
 title: Curso de Italiano en Italia
 description: "Heading example Here is example of hedings. You can use this heading by following markdownify rules."
-image: "/images/banderaItalia.jpg"
+image: "/images/pr1.png"
 date: 2022-06-02T06:00:00+00:00
 draft: false
 ---

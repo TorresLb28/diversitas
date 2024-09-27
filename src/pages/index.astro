@@ -17,7 +17,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           <div class="text-center text-white px-4">
             
             <!-- Imagen agregada -->
-            <img src="/images/logodiver2.png" alt="Logo Diversitas" class="mb-8 w-29 h-26 object-cover mx-auto">
+            <img id="pr-image" src="/images/diverlogo.png" alt="Logo Diversitas" class="mt-8 w-96 h-80 object-contain mx-auto">
             
             <p class="text-3xl mb-4">
               <em>"El verdadero viajero encuentra que el aburrimiento es más bien agradable que molesto."</em>
@@ -240,6 +240,19 @@ services!.slice(-2).map((service: any, index: number) => {
     transform: scale(1.2); /* Aumenta el tamaño al 120% */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.75); /* Aumenta la sombra */
   }
+
+  /*Logo movimiento*/
+  /* Estilo base para la imagen */
+#pr-image {
+  transition: transform 0.52s ease-in-out, opacity 0.52s ease-in-out;
+}
+
+/* Efecto de zoom */
+.zoom-out-fade-effect {
+    transform: scale(0.4); /* Reduce el tamaño a 80% */
+    opacity: 0.01; /* Desvanece la imagen completamente */
+}
+
 </style>
 
   <script>
@@ -262,6 +275,23 @@ services!.slice(-2).map((service: any, index: number) => {
         },
       });
     });
+    //Animacion Zoom
+   // Detecta el evento de scroll
+   window.addEventListener('scroll', function() {
+          const logo = document.getElementById('pr-image');
+          const scrollPosition = window.scrollY;
+
+          // Verificar que el elemento existe antes de aplicar las clases
+          if (logo) {
+              if (scrollPosition > 50) {
+                  logo.classList.add('zoom-out-fade-effect');
+              } else {
+                  logo.classList.remove('zoom-out-fade-effect');
+              }
+          }
+      });
+
+
   </script> 
   <!-- ./End service -->
 

@@ -1,0 +1,203 @@
+---
+import { Image } from "astro:assets";
+import Base from "@/layouts/Base.astro";
+import { getEntryBySlug } from "astro:content";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner, feature, services, workflow, call_to_action } = homepage.data;
+---
+
+<Base title="Cursos Online">
+
+  <!-- Título inicial -->
+  <section class="section">
+    <div class="container">
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Cursos Online</h1>
+    </div>
+  </section>
+
+  <!-- Sección ¿Cómo Trabajamos? -->
+  <section class="section" style="background-color: #FFFFFF; padding-top: 20px;">
+    <div class="container">
+      <div class="items-center gap-8 md:grid md:grid-cols-2">
+        <!-- Contenido de texto a la izquierda -->
+        <div class="content">
+          <h2>¿Cómo Trabajamos?</h2>
+          <p style="text-align: justify; font-size: 1.2em; font-style: italic;">
+            <ul>
+              <li>Nuestros cursos se imparten en línea.</li>
+              <li>Los profesores cuentan con experiencia y trayectoria académica.</li>
+              <li>Los grupos tienen un límite de 12 a 15 personas.</li>
+              <li>La duración de cursos es de 60 horas.</li>
+              <li>Están diseñados conforme al MCRE (Marco Común de Referencia Europeo).</li>
+              <li>Con excepción de las lenguas orientales.</li>
+            </ul>
+          </p>
+        </div>
+        <!-- Imagen estática a la derecha -->
+        <div class="image" style="margin-top: 10px;">
+          <img 
+            src="/images/courses.jpeg" 
+            alt="Imagen representativa" 
+            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+            class="rounded-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contenido de la página -->
+  <section class="section">
+    <div class="container">
+      <!-- Primera fila de 3 cursos -->
+      <div class="row pb-12">
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/fr1.png"
+              alt="Curso de Francés"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Francés</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Aprende francés desde cero con profesores nativos y mejora tus habilidades lingüísticas en un entorno virtual.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/fra" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/al1.png"
+              alt="Curso de Alemán"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Alemán</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Domina el alemán online con nuestro curso intensivo, diseñado para mejorar tus oportunidades profesionales.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/deu" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/pr1.png"
+              alt="Curso de Italiano"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Italiano</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Adéntrate en el idioma y la cultura italiana desde la comodidad de tu hogar con clases en línea.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/ita" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda fila de 3 cursos -->
+      <div class="row pb-12">
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/chn.png"
+              alt="Curso de Chino"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Chino (Mandarín)</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Aprende chino mandarín con clases online, impartidas por profesores nativos para una experiencia inmersiva.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/chn" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/esp.jpg"
+              alt="Curso de Español"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Español para Extranjeros</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Mejora tu español desde cualquier parte del mundo, con un curso online personalizado para extranjeros.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/esp" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/eng.png"
+              alt="Curso de Inglés"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Inglés</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Desarrolla tus habilidades en inglés con clases online y grupos reducidos para un aprendizaje eficaz.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/eng" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tercera fila de cursos -->
+      <div class="row pb-12">
+        <div class="col-12 mb-8 sm:col-6 lg:col-4">
+          <div class="text-center">
+            <Image
+              style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+              class="rounded-lg"
+              src="/images/jpn1.jpg"
+              alt="Curso de Japonés"
+              width={300}
+              height={200}
+            />
+            <h3 class="h4 mb-2 mt-4">Curso de Japonés</h3>
+            <p style="text-align: justify; font-size: 1.1em;">
+              Aprende japonés online y conoce la cultura del país a través de profesores nativos y un método interactivo.
+            </p>
+            <a class="btn btn-primary mt-4" href="/courses/jpn" rel="">
+              Saber Más
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Base>

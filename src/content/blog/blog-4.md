@@ -1,7 +1,7 @@
 ---
 title: "Curso de Alemán en Alemania"
 description: "Curso de Alemán el cual es impartido en Alemania"
-image: "/images/banderaAlemania1.jpg"
+image: "/images/al1.png"
 date: 2022-07-04T05:00:00Z
 draft: false
 ---

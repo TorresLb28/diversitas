@@ -24,11 +24,11 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 
 <Base title={postIndex?.data.title}>
 
-  <section class="section" >
+  <section class="section" style="background-color: #EDF6F5">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px">Cursos</h1>
+      <h1 style="text-align: center; margin-top: 25px">Cursos Online</h1>
       <div class="row pb-12">
-        <div class="row col-12 pb-24 pt-16">
+        <div class="row col-12 pb-24 pt-16" >
           <div class="md:col-6">
             {currentPosts[0].data.image && (
               <Image
@@ -44,7 +44,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
           <div class="md:col-6">
             <h2 class="h3 mb-2 mt-4">
               <a
-                href={`/${blog_folder}/${currentPosts[0].slug}`}
+                href=/courses
                 class="block hover:text-primary"
               >
                 Cursos de lenguas extranjeras:
@@ -59,13 +59,17 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
             </p>
             <a
               class="btn btn-primary mt-4"
-              href={`/${blog_folder}/${currentPosts[0].slug}`}
+              href=/courses
               rel=""
             >
               Saber Más
             </a>
           </div>
         </div>
+  </section>
+
+        <!-- Esta parte es la primera versión de los cursos en el extrangero
+         //no borrar para tenerlo por si acaso en futuras cosas
         <h1 id="cursoextra"></h1>
         <h1 style="text-align: center; margin-top: 100px; margin-bottom: 50px;">
           Cursos en el Extranjero
@@ -74,17 +78,97 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
           <div class="col-12 mb-8 sm:col-6 lg:col-4">
             <Post post={post} />
           </div>
-        ))}
-      </div>
-      <!--Esta parte es para que puedas cambiar de página en un futuro para que sea de noticias-->
-      <!--
-      <Pagination
-        section={blog_folder}
-        currentPage={1}
-        totalPages={totalPages}
-      />
-      -->
-    </div>
-  </section>
+        ))}-->
+      <section class="section">
+            <div class="container" >
+            <h1 id="cursoextra"></h1>
+            <h1 style="text-align: center; margin-top: 100px; margin-bottom: 50px;">
+              Cursos en el Extranjero
+            </h1>
+            
+            <div class="row pb-12">
+              <div class="col-12 mb-8 sm:col-6 lg:col-4">
+                <div class="text-center">
+                  <Image
+                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+                    class="rounded-lg"
+                    src="/images/fr1.png"
+                    alt="curso 1"
+                    width={300}
+                    height={200}
+                  />
+                  <h3 class="h4 mb-2 mt-4">Curso de Francés en Francia</h3>
+                  <p style="text-align: justify; font-size: 1.1em;">
+                    Aprende francés desde cero y sumérgete en una cultura fascinante con hablantes nativos.
+                  </p>
+                  <a
+                    class="btn btn-primary mt-4"
+                    href="/courses/fraex"
+                    rel=""
+                  >
+                    Saber Más
+                  </a>
+                </div>
+              </div>
+            
+              <div class="col-12 mb-8 sm:col-6 lg:col-4">
+                <div class="text-center">
+                  <Image
+                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+                    class="rounded-lg"
+                    src="/images/al1.png"
+                    alt="curso 2"
+                    width={300}
+                    height={200}
+                  />
+                  <h3 class="h4 mb-2 mt-4">Curso de Alemán en Alemania</h3>
+                  <p style="text-align: justify; font-size: 1.1em;">
+                    Domina el alemán con nuestro curso intensivo y mejora tus oportunidades laborales.
+                  </p>
+                  <a
+                    class="btn btn-primary mt-4"
+                    href="/courses/deuex"
+                    rel=""
+                  >
+                    Saber Más
+                  </a>
+                </div>
+              </div>
+            
+              <div class="col-12 mb-8 sm:col-6 lg:col-4">
+                <div class="text-center">
+                  <Image
+                    style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+                    class="rounded-lg"
+                    src="/images/pr1.png"
+                    alt="curso 3"
+                    width={300}
+                    height={200}
+                  />
+                  <h3 class="h4 mb-2 mt-4">Curso de Italiano en Italia</h3>
+                  <p style="text-align: justify; font-size: 1.1em;">
+                    Adéntrate en el idioma Italiano y su cultura milenaria con este curso introductorio.
+                  </p>
+                  <a
+                    class="btn btn-primary mt-4"
+                    href="/courses/itaex"
+                    rel=""
+                  >
+                    Saber Más
+                  </a>
+                </div>
+              </div>
+            </div>    
+            </div>
+            <!--Esta parte es para que puedas cambiar de página en un futuro para que sea de noticias-->
+            <!--
+            <Pagination
+              section={blog_folder}
+              currentPage={1}
+              totalPages={totalPages}
+            />
+            -->
+          </div>
+        </section>
 </Base>
 

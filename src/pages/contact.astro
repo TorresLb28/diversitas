@@ -46,10 +46,14 @@ const { title, description, info } = entry?.data;
             </div>
             <div class="mb-3">
               <textarea
-                class="form-textarea w-full rounded-md"
-                rows="7"
-                placeholder="Tu pregunta o mensaje / Your question or message"></textarea>
+                class="form-textarea w-full rounded h-40"  
+                name="message"  
+                rows="5"  
+                placeholder="Tu pregunta o mensaje / Your question or message"
+                required
+              ></textarea>
             </div>
+            
             <button type="submit" class="btn btn-primary"> Envíar </button>
           </form>
         </div>

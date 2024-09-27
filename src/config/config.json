@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Diversitas",
-    "base_url": "https://bigspring-light-astro.vercel.app",
+    "base_url": "",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -24,7 +24,7 @@
   },
 
   "params": {
-    "contact_form_action": "",
+    "contact_form_action": "https://formspree.io/f/xnnaejqk",
     "tag_manager_id": "",
     "footer_content": "",
     "copyright": "Designed and Developed By Diversitas.com"

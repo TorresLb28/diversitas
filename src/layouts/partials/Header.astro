@@ -19,29 +19,12 @@ export interface NavigationLink {
 
 const { main }: { main: NavigationLink[] } = menu;
 ---
-<!-- navbar estatica -->
- 
-<style>
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .main-content {
-    margin-top: 70px; /* Ajusta este valor según la altura de tu navbar */
-  }
-  </style>
-
 <header class="header">
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
       <a href="/">
-        <img src="/images/diversitaslogov2.png" alt="Descripción de la imagen" style="width:200px;height:70px;">
+        <img id="moving-logo" src="/images/diverlogo.png" alt="Descripción de la imagen" style="width: 65px; height: auto;">
       </a> 
     </div>
     <!-- navbar toggler -->
@@ -141,4 +124,87 @@ const { main }: { main: NavigationLink[] } = menu;
       )
     }
   </nav>
+
+  <style>
+    /*Nav Bar estatica*/ 
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main-content {
+      margin-top: 70px; /* Ajusta este valor según la altura de tu navbar */
+    }
+
+    /* Logo movimiento */
+ /* Define la animación para cuando el logo se vuelve visible y hace zoom */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Define la animación para cuando el logo se oculta y hace zoom a la inversa */
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+/* Estilo inicial del logo (invisible y pequeño) */
+#moving-logo {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.52s, transform 0.52s;
+}
+
+/* Clase para aplicar la animación de zoom in */
+.zoom-in {
+  animation: zoomIn 0.52s forwards;
+}
+
+/* Clase para aplicar la animación de zoom out */
+.zoom-out {
+  animation: zoomOut 0.52s forwards;
+}
+
+  </style>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const logo = document.getElementById('moving-logo');
+    
+    if (logo) { // Verifica si el logo existe
+      const scrollY = window.scrollY;
+  
+      if (scrollY > 70) { // Ajusta este valor según cuándo quieras que el logo aparezca
+        logo.classList.add('zoom-in');
+        logo.classList.remove('zoom-out');
+      } else {
+        logo.classList.add('zoom-out');
+        logo.classList.remove('zoom-in');
+        }
+      }
+
+  });
+</script>
+
+
+
+
+
+
 </header>

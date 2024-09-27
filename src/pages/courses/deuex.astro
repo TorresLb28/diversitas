@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Base from "@/layouts/Base.astro";
+import { getEntryBySlug } from "astro:content";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner, feature, services, workflow, call_to_action } = homepage.data;
+---
+
+<Base title="Curso Italiano">
+      <!-- Título inicial -->
+  <section class="section">
+    <div class="container">
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso de Alemán en Alemania</h1>
+    </div>
+  </section>
+
+    <section class="section" style="background-color: #FFFFFF; padding-top: 20px;">
+        <div class="container">
+          <div class="items-center gap-8 md:grid md:grid-cols-2">
+            <!-- Contenido de texto a la izquierda -->
+            <div class="content">
+              <h2>Contenido del Intercambio</h2>
+              <p style="text-align: justify; font-size: 1.2em; font-style: italic;">
+                <ul>
+                  <li>Nuestros cursos se imparten en línea.</li>
+                  <li>Los profesores cuentan con experiencia y trayectoria académica.</li>
+                  <li>Los grupos tienen un límite de 12 a 15 personas.</li>
+                  <li>La duración de cursos es de 60 horas.</li>
+                  <li>Están diseñados conforme al MCRE (Marco Común de Referencia Europeo).</li>
+                  <li>Con excepción de las lenguas orientales.</li>
+                </ul>
+              </p>
+            </div>
+            <!-- Imagen estática a la derecha -->
+            <div class="image" style="margin-top: 10px;">
+              <img 
+                src="/images/al3.jpg" 
+                alt="Imagen representativa" 
+                style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
+                class="rounded-lg">
+            </div>
+          </div>
+        </div>
+      </section>
+  </section>
+</Base>
