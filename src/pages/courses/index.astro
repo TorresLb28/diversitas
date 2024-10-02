@@ -25,20 +25,32 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           <h2>¿Cómo Trabajamos?</h2>
           <p style="text-align: justify; font-size: 1.2em; font-style: italic;">
             <ul>
-              <li>Nuestros cursos se imparten en línea.</li>
-              <li>Los profesores cuentan con experiencia y trayectoria académica.</li>
-              <li>Los grupos tienen un límite de 12 a 15 personas.</li>
-              <li>La duración de cursos es de 60 horas.</li>
-              <li>Están diseñados conforme al MCRE (Marco Común de Referencia Europeo).</li>
-              <li>Con excepción de las lenguas orientales.</li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                Están diseñados conforme al MCRE (Marco Común de Referencia Europeo).
+              </li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                Los profesores cuentan con experiencia y trayectoria académica.
+              </li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                Los grupos tienen un límite de 12 a 15 personas.
+              </li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                Con excepción de las lenguas orientales.
+              </li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                Nuestros cursos se imparten en línea.
+              </li>
+              <li style="text-align: justify; font-size: 1.3em;">
+                La duración de cursos es de 60 horas.
+              </li>
             </ul>
           </p>
         </div>
         <!-- Imagen estática a la derecha -->
         <div class="image" style="margin-top: 10px;">
           <img 
-            src="/images/courses.jpeg" 
-            alt="Imagen representativa" 
+            src="/images/courses.jpg" 
+            alt="Imagen Cursos Online" 
             style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
             class="rounded-lg">
         </div>
@@ -46,10 +58,11 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
     </div>
   </section>
   
-  <!-- Contenido de la página -->
-  <section class="section">
+<!-- Contenido de la página -->
+   <section class="section">
     <div class="container">
       <!-- Primera fila de 3 cursos -->
+       <!-- Curso de Francés Online -->
       <div class="row pb-12">
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
@@ -57,9 +70,9 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
               style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
               class="rounded-lg"
               src="/images/fr1.png"
-              alt="Curso de Francés"
-              width={300}
-              height={200}
+              alt="Curso Online Francés"
+              width={400}
+              height={300}
             />
             <h3 class="h4 mb-2 mt-4">Curso de Francés</h3>
             <p style="text-align: justify; font-size: 1.1em;">
@@ -69,14 +82,16 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
               Saber Más
             </a>
           </div>
-        </div>
+        </div> 
 
+         <!--Curso de alemán -->
+         <!-- 
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
             <Image
               style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
               class="rounded-lg"
-              src="/images/al1.png"
+              src="/images/deu1.png"
               alt="Curso de Alemán"
               width={300}
               height={200}
@@ -89,17 +104,18 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
               Saber Más
             </a>
           </div>
-        </div>
-
+        </div> -->
+        
+        <!-- Curso de Italiano Online -->
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
             <Image
               style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
               class="rounded-lg"
               src="/images/pr1.png"
-              alt="Curso de Italiano"
-              width={300}
-              height={200}
+              alt="Curso Online- Italiano"
+              width={400}
+              height={300}
             />
             <h3 class="h4 mb-2 mt-4">Curso de Italiano</h3>
             <p style="text-align: justify; font-size: 1.1em;">
@@ -113,6 +129,8 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       </div>
 
       <!-- Segunda fila de 3 cursos -->
+       <!--  Chino / Español para extrangeros / Inglés-->
+        <!--
       <div class="row pb-12">
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
@@ -173,10 +191,12 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
             </a>
           </div>
         </div>
-      </div>
-
+      </div> -->
+      
+      
       <!-- Tercera fila de cursos -->
-      <div class="row pb-12">
+        <!-- Japonés--> 
+      <!--<div class="row pb-12">
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
             <Image
@@ -196,8 +216,13 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
             </a>
           </div>
         </div>
-      </div>
+      </div>-->
 
-    </div>
+   </div>
   </section>
 </Base>
+
+
+<!-- Código para futuro en donde estan todos los demás cursos-->
+  
+  
