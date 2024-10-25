@@ -12,7 +12,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   <!-- Título inicial -->
   <section class="section">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;" class="title-hover">Cursos Online</h1>
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Cursos Online</h1>
     </div>
   </section>
 
@@ -22,7 +22,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Contenido de texto a la izquierda -->
         <div class="content">
-          <h2 class="title-hover">¿Cómo Trabajamos?</h2>
+          <h2>¿Cómo Trabajamos?</h2>
           <p style="text-align: justify; font-size: 1.2em; font-style: italic;">
             <ul>
               <li style="text-align: justify; font-size: 1.3em;">
@@ -66,15 +66,17 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       <div class="row pb-12">
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
+            <a href="/courses/onlinecourses/fra">
             <Image
               style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
-              class="rounded-lg"
+              class="rounded-lg image"
               src="/images/fr1.png"
               alt="Curso Online Francés"
               width={400}
               height={300}
             />
-            <h3 class="h4 mb-2 mt-4">Curso de Francés</h3>
+            </a>
+            <a href="/courses/onlinecourses/fra"><h3 class="h4 mb-2 mt-4 little-hover">Curso Online de Francés</h3></a>
             <p style="text-align: justify; font-size: 1.1em;">
               Aprende francés desde cero con profesores nativos y mejora tus habilidades lingüísticas en un entorno virtual.
             </p>
@@ -109,15 +111,17 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
         <!-- Curso de Italiano Online -->
         <div class="col-12 mb-8 sm:col-6 lg:col-4">
           <div class="text-center">
+            <a href="/courses/onlinecourses/ita">
             <Image
               style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
-              class="rounded-lg"
+              class="rounded-lg image"
               src="/images/pr1.png"
               alt="Curso Online- Italiano"
               width={400}
               height={300}
             />
-            <h3 class="h4 mb-2 mt-4">Curso de Italiano</h3>
+           </a>
+            <a href="/courses/onlinecourses/ita"><h3 class="h4 mb-2 mt-4 little-hover">Curso Online de Italiano</h3></a>
             <p style="text-align: justify; font-size: 1.1em;">
               Adéntrate en el idioma y la cultura italiana desde la comodidad de tu hogar con clases en línea.
             </p>
@@ -222,13 +226,30 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   </section>
 
   <style>
-    .title-hover {
-      transition: transform 0.3s ease; /* Suaviza la transformación */
-    }
-    
-    .title-hover:hover {
-      transform: scale(1.1); /* Aumenta el tamaño al 110% */
-    }
+    /*************************************************************/
+    /* Animación de titulos pequeños*/
+    /*************************************************************/
+    .little-hover {
+            transition: transform 0.3s ease; /* Suaviza la transformación */
+          }
+          
+          .little-hover:hover {
+            transform: scale(1.02); /* Aumenta el tamaño al 110% */
+          }
+          a:hover .little-hover {
+        color: #0DA697; /* Cambia el color al pasar el mouse */
+          }
+
+    /*************************************************************/
+    /* Animación de imagenes */
+    /*************************************************************/
+    .image {
+        transition: transform 0.3s ease; /* Suaviza la transformación */
+      }
+      
+      .image:hover {
+        transform: scale(1.02); /* Aumenta el tamaño al 110% al pasar el mouse */
+      }
   </style>
 
 </Base>

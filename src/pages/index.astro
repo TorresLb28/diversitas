@@ -7,6 +7,7 @@ import { getEntryBySlug } from "astro:content";
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, feature, services, workflow, call_to_action } = homepage.data;
 import Carousel from "@/components/Carousel.astro"
+import Carousel2 from "@/components/Carousel2.astro"
 ---
 
 <Base>
@@ -18,7 +19,7 @@ import Carousel from "@/components/Carousel.astro"
           <div class="text-center text-white px-4">
             
             <!-- Imagen agregada -->
-            <img id="pr-image" src="/images/diverlogo.png" alt="Logo Diversitas" style="margin-top: 50px;" class="mt-8 w-96 h-80 object-contain mx-auto">
+            <img id="pr-image" src="/images/diverlogo.png" alt="Logo Diversitas" style="margin-top: 50px;" class="mt-8 w-96 h-80 object-contain mx-auto image">
             
             <p class="text-3xl mb-4">
               <em>"El verdadero viajero encuentra que el aburrimiento es más bien agradable que molesto."</em>
@@ -47,6 +48,10 @@ import Carousel from "@/components/Carousel.astro"
 
 <div>
   <Carousel></Carousel>
+</div>
+
+<div>
+  <Carousel2></Carousel2>
 </div>
   <!-- PARTE2 -->
    <!--
@@ -93,7 +98,7 @@ import Carousel from "@/components/Carousel.astro"
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Contenido de texto a la izquierda -->
         <div class="content">
-          <h2 class="title-hover">NOSOTROS</h2>
+          <h2>NOSOTROS</h2>
           <p style="text-align: justify; font-size: 1.2em; font-style: italic; ">
             “El verdadero viaje de descubrimiento no consiste en buscar nuevas tierras, sino en mirar con nuevos ojos.” - Marcel Proust
         </p>
@@ -172,7 +177,7 @@ services!.slice(-2).map((service: any, index: number) => {
           {/* Contenido del primer servicio */}
           {isFirstService && (
             <div class={`service-content md:order-2`}>
-              <h2 class="font-bold leading-[40px]; title-hover" style="margin-top: 15px;">¿QUIÉNES SOMOS?</h2>
+              <h2 class="font-bold leading-[40px];" style="margin-top: 15px;">¿QUIÉNES SOMOS?</h2>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;" ><span style="color: #0DA697">Diversitas</span> es una organización que tal y como su acepción en latín expresa; es el reconocimiento a la diversidad cultural, lingüística y de todo tipo, que existe en nuestro planeta.</p>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;">Somos una organización la cual, mediante actividades de tipo educativo, cultural, intercultural e intergeneracional, pretende brindar oportunidades a personas de todas las edades, para vivir experiencias que ensanchen su horizonte cultural, emocional y humano.</p>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;">Brindamos diversas alternativas para asistir a un encuentro con el otro, lo diferente, aquello que nos invita a explorar sus orígenes, raíces, tradiciones, y al mismo tiempo, nos cuestione internamente ante nuestras propias creencias.</p>
@@ -260,17 +265,16 @@ services!.slice(-2).map((service: any, index: number) => {
     transform: scale(0.4); /* Reduce el tamaño a 80% */
     opacity: 0.01; /* Desvanece la imagen completamente */
 }
-
-/**********************************************/
-/*animacion que salte los titulos */ 
-/**********************************************/
-.title-hover {
-      transition: transform 0.3s ease; /* Suaviza la transformación */
-    }
-    
-    .title-hover:hover {
-      transform: scale(1.07); /* Aumenta el tamaño al 110% */
-    }
+ /*************************************************************/
+ /* Animación de imagenes */
+ /*************************************************************/
+    .image {
+        transition: transform 0.3s ease; /* Suaviza la transformación */
+      }
+      
+      .image:hover {
+        transform: scale(1.02); /* Aumenta el tamaño al 110% al pasar el mouse */
+      }
 </style>
 
   <script>

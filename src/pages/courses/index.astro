@@ -27,7 +27,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 
   <section class="section" style="background-color: #EDF6F5">
     <div class="container">
-      <Titlehover> Cursos Online<Titlehover/>
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Cursos Online</h1>
       <div class="row pb-12">
         <div class="row col-12 pb-24 pt-16" >
           <div class="image md:col-6">
@@ -83,16 +83,20 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
       <section class="section" id="cursoextra">
             <div class="container" >
             <h1 ></h1>
-            <h1 class="title-hover" style="text-align: center; margin-top: 10px; margin-bottom: 70px;">
+            <h1 style="text-align: center; margin-top: 10px; margin-bottom: 30px;">
               <img src="/images/new.png" alt="Icono de Nuevo" class="animar-icono" style="width: 60px; vertical-align: middle; margin-right: 10px; position: relative; top: 35px;">
               Cursos en el Extranjero
             </h1>
-
+            <p class="txt" style="text-align: center; font-size: 1.6em; font-weight: bold; margin-top: 5px; color: #0DA697;">
+              Verano 2025, ¡Aprovecha y haz pagos parciales desde noviembre o desde que te inscribas!
+          </p>
+            <br>
+            <br>
             <!--Curso de Francés en Francia -->
             <div class="row pb-12">
               <div class="col-12 mb-8 sm:col-6 lg:col-4">
                 <div class="text-center">
-                  <a href="/courses/excourses/fraex">
+                  <a href="/soon">
                   <Image
                     style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
                     class="image rounded-lg"
@@ -102,13 +106,13 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
                     height={300}
                   />
                   </a>
-                  <h3 class="h4 mb-2 mt-4">Curso de Francés en Francia</h3>
+                  <a href="/soon"><h3 class="h4 mb-2 mt-4 little-hover">Curso de Francés en Francia</h3></a>
                   <p style="text-align: justify; font-size: 1.1em;">
                     Aprende francés desde cero y sumérgete en una cultura fascinante con hablantes nativos.
                   </p>
                   <a
                     class="btn btn-primary mt-4"
-                    href="/courses/excourses/fraex"
+                    href="/soon"
                     rel=""
                   >
                     Saber Más
@@ -129,7 +133,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
                     height={300}
                   />
                   </a>
-                  <h3 class="h4 mb-2 mt-4">Curso de Alemán en Alemania</h3>
+                  <a href="/courses/excourses/deuex"><h3 class="h4 mb-2 mt-4 little-hover">Curso de Alemán en Alemania</h3></a>
                   <p style="text-align: justify; font-size: 1.1em;">
                     Domina el alemán con nuestro curso intensivo y mejora tus oportunidades laborales.
                   </p>
@@ -155,7 +159,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
                     height={300}
                   />
                  </a>
-                  <h3 class="h4 mb-2 mt-4 little-hover" >Curso de Italiano en Italia</h3>
+                  <a href="/courses/excourses/itaex"><h3 class="h4 mb-2 mt-4 little-hover" >Curso de Italiano en Italia</h3></a>
                   <p style="text-align: justify; font-size: 1.1em;">
                     Adéntrate en el idioma Italiano y su cultura milenaria con este curso introductorio.
                   </p>
@@ -183,6 +187,22 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 
         <style>
     /*************************************************************/
+    /* Animación de Texto Verano */
+    /*************************************************************/
+          .txt {
+              display: inline-block; /* Asegura que el elemento se mantenga centrado */
+              animation: agrandarReducir2 2s infinite;
+          }
+
+          @keyframes agrandarReducir2 {
+              0%, 100% {
+                  transform: scale(1); /* Tamaño original */
+              }
+              50% {
+                  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+              }
+          }
+    /*************************************************************/
     /* Animación de New */
     /*************************************************************/
           @keyframes agrandarReducir {
@@ -201,17 +221,6 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
             width: 30px;
             animation: agrandarReducir 2s infinite;
           }
-          
-    /*************************************************************/
-    /* Animación de titulos */
-    /*************************************************************/
-           .title-hover {
-            transition: transform 0.3s ease; /* Suaviza la transformación */
-          }
-          
-          .title-hover:hover {
-            transform: scale(1.1); /* Aumenta el tamaño al 110% */
-          }
 
     /*************************************************************/
     /* Animación de titulos pequeños*/
@@ -222,6 +231,9 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
           
           .little-hover:hover {
             transform: scale(1.02); /* Aumenta el tamaño al 110% */
+          }
+          a:hover .little-hover {
+        color: #0DA697; /* Cambia el color al pasar el mouse */
           }
 
     /*************************************************************/

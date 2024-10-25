@@ -11,7 +11,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   <!-- Título inicial -->
   <section class="section">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;" class="title-hover">Curso Online de Francés A1</h1>
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso Online de Francés A1</h1>
     </div>
   </section>
 
@@ -21,7 +21,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Contenido de texto a la izquierda -->
         <div class="content">
-          <h2 class="title-hover">Principiante o inicial</h2>
+          <h2>Principiante o inicial</h2>
           <p style="text-align: justify; font-size: 1.5em; font-style: italic;">
             <ul style="font-size: 1.3em;">
               <li>Inicio: 12 de Noviembre de 2024</li>
@@ -35,7 +35,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           <img 
             src="/images/fr1.png" 
             alt="Imagen Curso Frances Online" 
-            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 300px;"
+            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92)"
             class="rounded-lg">
         </div>
       </div>
@@ -47,15 +47,15 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           <img 
             src="/images/cursofra.png" 
             alt="Imagen Contacto Curso Francés Online" 
-            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 400px;" 
+            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92)" 
             class="rounded-lg">
         </div>
 
         <!-- Contenido de texto a la derecha -->
         <div class="content">
-          <h2 class="title-hover">¿Qué es nivel A1?</h2>
+          <h2>¿Qué es nivel A1?</h2>
           <br>
-          <p style="text-align: justify; font-size: 1.2em;" class="title-hover">
+          <p style="text-align: justify; font-size: 1.2em;">
             <b><i><span style="color: #0AA8A7;">
               La nomenclatura A1, correspondiente al Marco Común Europeo de Referencia, para el aprendizaje de lenguas (MCER)
             </span></i></b>
@@ -76,13 +76,16 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   </section>
 
   <style>
-    .title-hover {
-      transition: transform 0.3s ease; /* Suaviza la transformación */
-    }
-    
-    .title-hover:hover {
-      transform: scale(1.1); /* Aumenta el tamaño al 110% */
-    }
+ /*************************************************************/
+ /* Animación de imagenes */
+ /*************************************************************/
+ .image {
+        transition: transform 0.3s ease; /* Suaviza la transformación */
+      }
+      
+      .image:hover {
+        transform: scale(1.02); /* Aumenta el tamaño al 110% al pasar el mouse */
+      }
   </style>
 
 </Base>
