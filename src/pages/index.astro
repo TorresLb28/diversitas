@@ -6,6 +6,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, feature, services, workflow, call_to_action } = homepage.data;
+import Carousel from "@/components/Carousel.astro"
 ---
 
 <Base>
@@ -41,10 +42,12 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       </section>
     </div>
   </section>
-  
-    <!-- boton -->
 
+<!-- Apartado para noticias con animación y enlace -->
 
+<div>
+  <Carousel></Carousel>
+</div>
   <!-- PARTE2 -->
    <!--
   <section class="section bg-theme-light">
@@ -90,7 +93,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Contenido de texto a la izquierda -->
         <div class="content">
-          <h2>NOSOTROS</h2>
+          <h2 class="title-hover">NOSOTROS</h2>
           <p style="text-align: justify; font-size: 1.2em; font-style: italic; ">
             “El verdadero viaje de descubrimiento no consiste en buscar nuevas tierras, sino en mirar con nuevos ojos.” - Marcel Proust
         </p>
@@ -169,7 +172,7 @@ services!.slice(-2).map((service: any, index: number) => {
           {/* Contenido del primer servicio */}
           {isFirstService && (
             <div class={`service-content md:order-2`}>
-              <h2 class="font-bold leading-[40px]" style="margin-top: 15px;">¿QUIÉNES SOMOS?</h2>
+              <h2 class="font-bold leading-[40px]; title-hover" style="margin-top: 15px;">¿QUIÉNES SOMOS?</h2>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;" ><span style="color: #0DA697">Diversitas</span> es una organización que tal y como su acepción en latín expresa; es el reconocimiento a la diversidad cultural, lingüística y de todo tipo, que existe en nuestro planeta.</p>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;">Somos una organización la cual, mediante actividades de tipo educativo, cultural, intercultural e intergeneracional, pretende brindar oportunidades a personas de todas las edades, para vivir experiencias que ensanchen su horizonte cultural, emocional y humano.</p>
               <p class="mt-4 mb-2" style="text-align: justify; font-size: 1.2em; font-weight: bold;">Brindamos diversas alternativas para asistir a un encuentro con el otro, lo diferente, aquello que nos invita a explorar sus orígenes, raíces, tradiciones, y al mismo tiempo, nos cuestione internamente ante nuestras propias creencias.</p>
@@ -230,8 +233,11 @@ services!.slice(-2).map((service: any, index: number) => {
   );
 })
 }
-<!--Aquí es el css para que haga el zoom las fotos del carrete --> 
+
 <style>
+/**********************************************/
+/*animacion para que haga el zoom las fotos del carrete */ 
+/**********************************************/
   .swiper-slide {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -241,7 +247,9 @@ services!.slice(-2).map((service: any, index: number) => {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.75); /* Aumenta la sombra */
   }
 
-  /*Logo movimiento*/
+/**********************************************/
+/*animación del logo */ 
+/**********************************************/
   /* Estilo base para la imagen */
 #pr-image {
   transition: transform 0.52s ease-in-out, opacity 0.52s ease-in-out;
@@ -253,9 +261,23 @@ services!.slice(-2).map((service: any, index: number) => {
     opacity: 0.01; /* Desvanece la imagen completamente */
 }
 
+/**********************************************/
+/*animacion que salte los titulos */ 
+/**********************************************/
+.title-hover {
+      transition: transform 0.3s ease; /* Suaviza la transformación */
+    }
+    
+    .title-hover:hover {
+      transform: scale(1.07); /* Aumenta el tamaño al 110% */
+    }
 </style>
 
   <script>
+
+    ////////////////////////////////////////////////////////
+    /*      SWIPER PARA CARRETE        */ 
+    ////////////////////////////////////////////////////////
     import { Swiper } from "swiper";
     import "swiper/css";
     import "swiper/css/pagination";

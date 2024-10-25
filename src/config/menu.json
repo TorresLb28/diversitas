@@ -14,11 +14,15 @@
     },
     {
       "name": "Cursos",
-      "url": "/blog"
+      "url": "/courses"
     },
     {
       "name": "Cursos Extranjero",
-      "url": "/blog#cursoextra"
+      "url": "/courses#cursoextra"
+    },
+    {
+      "name": "Novedades",
+      "url": "/news"
     }
   ],
   

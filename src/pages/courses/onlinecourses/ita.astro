@@ -11,7 +11,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   <!-- Título inicial -->
   <section class="section">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso Online de Italiano A1</h1>
+      <h1 class="title-hover" style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso Online de Italiano A1</h1>
     </div>
   </section>
 
@@ -21,7 +21,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Contenido de texto a la izquierda -->
         <div class="content">
-          <h2>Principiante o inicial</h2>
+          <h2 class="title-hover">Principiante o inicial</h2>
           <p style="text-align: justify; font-size: 1.5em; font-style: italic;">
             <ul style="font-size: 1.3em;">
               <li>Inicio: 11 de Noviembre de 2024</li>
@@ -53,10 +53,10 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
 
         <!-- Contenido de texto a la derecha -->
         <div class="content">
-          <h2>¿Qué es nivel A1?</h2>
+          <h2 class="title-hover">¿Qué es nivel A1?</h2>
           <br>
-          <p style="text-align: justify; font-size: 1.2em;">
-            <b><i><span style="color: #0AA8A7;">La nomenclatura A1, correspondiente al Marco Común Europeo de Referencia, para el aprendizaje de lenguas (MCER)</span></i></b>
+          <p style="text-align: justify; font-size: 1.2em;" class="title-hover">
+            <b><i><span style="color: #0AA8A7;" >La nomenclatura A1, correspondiente al Marco Común Europeo de Referencia, para el aprendizaje de lenguas (MCER)</span></i></b>
           </p>
           <p style="text-align: justify; font-size: 1.2em;">
             Nuestros cursos están diseñados conforme a sus criterios.
@@ -71,4 +71,15 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
       </div>
     </div>
   </section>
+
+  <style>
+    .title-hover {
+      transition: transform 0.3s ease; /* Suaviza la transformación */
+    }
+    
+    .title-hover:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    }
+  </style>
+
 </Base>

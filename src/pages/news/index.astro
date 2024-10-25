@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import Pagination from "@/layouts/components/Pagination.astro";
+import Post from "@/layouts/partials/Post.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { markdownify, plainify } from "@/lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+import type { TIndexData } from "@/types";
+import Titlehover from "@/components/Titlehover.astro";
+
+const { blog_folder, summary_length } = config.settings;
+
+const postIndex = (await getEntryBySlug<any, string>(
+  blog_folder,
+  "index",
+)) as TIndexData;
+const posts = await getSinglePage(blog_folder as any);
+const sortedPosts = sortByDate(posts);
+const totalPages = Math.ceil(posts.length / config.settings.pagination);
+const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+---
+
+<Base title={postIndex?.data.title}>
+
+  <section class="section" style="background-color: #ffff">
+    <div class="container">
+      <Titlehover> ¡Novedades de la semana!<Titlehover/>
+      <div class="row pb-12">
+        <div class="row col-12 pb-24 pt-16" >
+          <div class="md:col-6 image">
+            {currentPosts[0].data.image && (
+              <Image
+                style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); margin-top: 30px;"
+                class="rounded-lg"
+                src="/images/news.jpg"
+                alt="imagen Cursos Online"
+                width={525}
+                height={275}
+              />
+            )}
+          </div>
+          <div class="md:col-6">
+            <h2 class="h3 mb-2 mt-4 little-hover">
+              <a
+                href=/courses#cursoextra
+                class="block hover:text-primary"
+              >
+              ¡Cursos de lenguas extranjeras en el extranjero! :
+              </a>
+            </h2>
+            <p style="text-align: justify; font-size: 1.2em; font-weight: bold;">
+              ¡Ya están abiertas las inscripciones para los cursos de verano en el extranjero! Si siempre has soñado con aprender italiano en Italia o alemán en Alemania, esta es tu oportunidad. Los cursos de italiano se llevarán a cabo en las vibrantes ciudades italianas, mientras que los de alemán se ofrecen en los lugares más icónicos de Alemania.
+            </p>
+            <br />
+            <p style="text-align: justify; font-size: 1.2em;">
+              ¡No pierdas tiempo, ya puedes inscribirte y asegurar tu lugar para el próximo verano!
+            </p>
+            <br />
+            <p style="text-align: justify; font-size: 1.2em;">
+                Para obtener más detalles sobre los cursos y cómo inscribirte, solo tienes que hacer clic en el botón "Saber de los cursos". ¡No dejes pasar esta experiencia única!
+            </p>
+            <a
+              class="btn btn-primary mt-4"
+              href=/courses#cursoextra
+              rel=""
+            >
+              Saber de los cursos
+            </a>
+          </div>
+        </div>
+  </section>
+
+  <style>
+    /*************************************************************/
+    /* Animación de titulos */
+    /*************************************************************/
+    .title-hover {
+      transition: transform 0.3s ease; /* Suaviza la transformación */
+    }
+    
+    .title-hover:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    }
+
+    /*************************************************************/
+    /* Animación de titulos pequeños*/
+    /*************************************************************/
+    .little-hover {
+            transition: transform 0.3s ease; /* Suaviza la transformación */
+          }
+          
+          .little-hover:hover {
+            transform: scale(1.02); /* Aumenta el tamaño al 110% */
+          }
+
+    /*************************************************************/
+    /* Animación de imagenes */
+    /*************************************************************/
+    .image {
+        transition: transform 0.3s ease; /* Suaviza la transformación */
+      }
+      
+      .image:hover {
+        transform: scale(1.02); /* Aumenta el tamaño al 110% al pasar el mouse */
+      }
+  </style>
+</Base>
+

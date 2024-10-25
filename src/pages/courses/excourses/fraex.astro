@@ -7,11 +7,11 @@ const homepage = await getEntryBySlug("homepage", "index");
 const { banner, feature, services, workflow, call_to_action } = homepage.data;
 ---
 
-<Base title="Curso Italiano">
+<Base title="Curso Francés">
       <!-- Título inicial -->
   <section class="section">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso de Fránces en Francia</h1>
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;" class="title-hover">Curso de Fránces en Francia</h1>
     </div>
   </section>
 
@@ -20,7 +20,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           <div class="items-center gap-8 md:grid md:grid-cols-2">
             <!-- Contenido de texto a la izquierda -->
             <div class="content">
-              <h2>Contenido del Curso</h2>
+              <h2 class="title-hover">Contenido del Curso</h2>
               <p style="text-align: justify; font-size: 1.2em; font-style: italic;">
                 <ul>
                   <li style="text-align: justify; font-size: 1.3em;">
@@ -54,4 +54,15 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
         </div>
       </section>
   </section>
+
+  <style>
+    .title-hover {
+      transition: transform 0.3s ease; /* Suaviza la transformación */
+    }
+    
+    .title-hover:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    }
+  </style>
+  
 </Base>

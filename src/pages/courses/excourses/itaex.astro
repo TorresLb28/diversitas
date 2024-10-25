@@ -1,0 +1,214 @@
+---
+import { Image } from "astro:assets";
+import Base from "@/layouts/Base.astro";
+import { getEntryBySlug } from "astro:content";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner, feature, services, workflow, call_to_action } = homepage.data;
+---
+
+<Base title="Curso Italiano">
+  <!-- Título inicial -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title-hover" style="text-align: center; margin-top: 25px; margin-bottom: 10px;">
+        Curso de Italiano en Italia
+      </h1>
+    </div>
+  </section>
+
+  <!-- Sección de Fechas disponibles -->
+  <section class="section" style="background-color: #FFFFFF; padding-top: 20px;">
+    <div class="container">
+      <div class="items-center gap-8 md:grid md:grid-cols-2">
+        <!-- Contenido de texto a la izquierda -->
+        <div class="content">
+          <h2 class="title-hover" style="text-align: center;">Curso de Italiano en Italia - Fechas disponibles:</h2>
+          <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
+            <li class="title-hover"><a href="#ItaJune">Junio 2025</a></li>
+            <li class="title-hover"><a href="#ItaJuly">Julio 2025</a></li>
+            <li class="title-hover"><a href="#ItaSep">Septiembre 2025</a></li>
+            <li class="title-hover"><a href="#ItaOct">Octubre 2025</a></li>
+            <li><b><i>¡Escoge la fecha que mejor se adapte a tu agenda y prepárate para una experiencia inolvidable!</i></b></li>
+          </ul>
+        </div>
+        
+        <!-- Imagen estática a la derecha -->
+        <div class="image" style="margin-top: 10px;">
+          <img 
+            src="/images/it4.png" 
+            alt="Imagen Curso italiano Italia" 
+            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);" 
+            class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Información sobre Curso Junio 2025 -->
+    <div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" id="ItaJune">
+      <div class="items-center gap-8 md:grid md:grid-cols-2">
+        <!-- Imagen a la izquierda -->
+        <div class="image" style="margin-top: 10px;">
+          <img 
+            src="/images/cursoita.png" 
+            alt="Imagen Contacto Curso Italiano Online" 
+            style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 400px;" 
+            class="rounded-lg">
+        </div>
+
+        <!-- Contenido de texto a la derecha -->
+        <div class="content">
+          <h3 class="title-hover" style="text-align: center;">
+            <b>Curso de verano en Italia para jóvenes y adultos</b>
+          </h3>
+          <h2 class="title-hover" style="text-align: center;">Junio 2025</h2>
+          <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
+            <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
+            <li>Aprende y disfruta durante el mes de junio.</li>
+            <li><span style="color: #0AA8A7; "><b>Inicia: junio 02</b></span></li>
+            <li><span style="color: #0AA8A7; "><b>Fin: junio 26</b></span></li>
+            <li>Curso de 80 horas</li>
+            <li>Escuela de prestigio y reconocida experiencia</li>
+            <li>Visitas de fin de semana</li>
+            <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
+            <li>Recorrido cultural de 16 días (Liguria, Mediterráneo francés, región Ródano Alpes). Incluye 3 noches en Roma antes del inicio del curso</li>
+            <li><span style="color: #0AA8A7; "><b>Salida: 28 de mayo</b></span></li>
+            <li><span style="color: #0AA8A7; "><b>Regreso: 13 de julio</b></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+<!-- Sección de Información sobre Curso Julio 2025 -->
+<div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" id="ItaJuly">
+  <div class="items-center gap-8 md:grid md:grid-cols-2">
+    
+    <!-- Contenido de texto a la izquierda -->
+    <div class="content">
+      <h3 class="title-hover" style="text-align: center;">
+        <b>Curso de verano en Italia para jóvenes y adultos</b>
+      </h3>
+      <h2 class="title-hover" style="text-align: center;">Julio 2025</h2>
+      <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
+        <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
+        <li>Disfruta y aprende durante el mes de julio.</li>
+        <li><span style="color: #0AA8A7; "><b>Inicia: junio 30</b></span></li>
+        <li><span style="color: #0AA8A7; "><b>Fin: julio 24</b></span></li>
+        <li>Curso de 80 horas</li>
+        <li>Escuela de prestigio y reconocida experiencia</li>
+        <li>Visitas de fin de semana</li>
+        <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
+        <li>Recorrido cultural de 16 días (Liguria, Mediterráneo francés, región Ródano Alpes). Incluye 3 noches en Roma antes del inicio del curso</li>
+        <li><span style="color: #0AA8A7; "><b>Salida: 25 de junio</b></span></li>
+        <li><span style="color: #0AA8A7; "><b>Regreso: 09 de agosto</b></span></li>
+      </ul>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="image" style="margin-top: 10px;">
+      <img 
+        src="/images/cursoita.png" 
+        alt="Imagen Contacto Curso Italiano Online Julio" 
+        style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 400px;" 
+        class="rounded-lg">
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Información sobre Curso Septiembre 2025 -->
+<div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" id="ItaSep">
+  <div class="items-center gap-8 md:grid md:grid-cols-2">
+    <!-- Imagen a la izquierda -->
+    <div class="image" style="margin-top: 10px;">
+      <img 
+        src="/images/cursoita.png" 
+        alt="Imagen Contacto Curso Italiano Septiembre" 
+        style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 400px;" 
+        class="rounded-lg">
+    </div>
+    <!-- Contenido de texto a la derecha -->
+    <div class="content">
+      <h3 class="title-hover" style="text-align: center;">
+        <b>Curso de verano en Italia para jóvenes y adultos</b>
+      </h3>
+      <h2 class="title-hover" style="text-align: center;">Septiembre 2025</h2>
+      <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
+        <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
+        <li>Aprende y disfruta durante el mes de septiembre.</li>
+        <li><span style="color: #0AA8A7;"><b>Inicia: septiembre 01</b></span></li>
+        <li><span style="color: #0AA8A7;"><b>Fin: septiembre 25</b></span></li>
+        <li>Curso de 80 horas</li>
+        <li>Escuela de prestigio y reconocida experiencia</li>
+        <li>Visitas de fin de semana</li>
+        <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
+        <li>Recorrido cultural de 16 días (Liguria, Mediterráneo francés, región Ródano Alpes). Incluye 3 noches en Roma antes del inicio del curso</li>
+        <li><span style="color: #0AA8A7;"><b>Salida: 27 de agosto</b></span></li>
+        <li><span style="color: #0AA8A7;"><b>Regreso: 11 de octubre</b></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Información sobre Curso Octubre 2025 -->
+<div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" id="ItaOct">
+  <div class="items-center gap-8 md:grid md:grid-cols-2">
+    <!-- Imagen a la izquierda -->
+    <div class="image" style="margin-top: 10px;">
+      <img 
+        src="/images/cursoita.png" 
+        alt="Imagen Contacto Curso Italiano Octubre" 
+        style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92); width: 500px; height: 400px;" 
+        class="rounded-lg">
+    </div>
+
+    <!-- Contenido de texto a la derecha -->
+    <div class="content">
+      <h3 class="title-hover" style="text-align: center;">
+        <b>Curso de otoño en Italia para jóvenes y adultos</b>
+      </h3>
+      <h2 class="title-hover" style="text-align: center;">Octubre 2025</h2>
+      <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
+        <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
+        <li>Aprende y disfruta durante el mes de octubre.</li>
+        <li><span style="color: #0AA8A7;"><b>Inicio: septiembre 29</b></span></li>
+        <li><span style="color: #0AA8A7;"><b>Fin: octubre 23</b></span></li>
+        <li>Curso de 80 horas</li>
+        <li>Escuela de prestigio y reconocida experiencia</li>
+        <li>Visitas de fin de semana</li>
+        <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
+        <li>Recorrido cultural de 16 días (Liguria, Mediterráneo francés, región Ródano Alpes). Incluye 3 noches en Roma antes del inicio del curso</li>
+        <li><span style="color: #0AA8A7;"><b>Salida: 24 de septiembre</b></span></li>
+        <li><span style="color: #0AA8A7;"><b>Regreso: 08 de noviembre</b></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <style>
+  /*************************************************************/
+  /* Animación de titulos */
+  /*************************************************************/
+  
+  .title-hover {
+        transition: transform 0.3s ease; /* Suaviza la transformación */
+      }
+      
+      .title-hover:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al 110% */
+      }
+
+  /*************************************************************/
+  /* Animación de imagenes */
+  /*************************************************************/
+      .image {
+      transition: transform 0.3s ease; /* Suaviza la transformación */
+    }
+    
+    .image:hover {
+      transform: scale(1.02); /* Aumenta el tamaño al 110% al pasar el mouse */
+    }
+  </style>
+  
+</Base>
