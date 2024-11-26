@@ -6,11 +6,11 @@ import { getEntryBySlug } from "astro:content";
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, feature, services, workflow, call_to_action } = homepage.data;
 ---
-<Base title="Curso Francés">
+<Base title="Curso Inglés">
       <!-- Título inicial -->
   <section class="section">
     <div class="container">
-      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso de Francés en Francia</h1>
+      <h1 style="text-align: center; margin-top: 25px; margin-bottom: 10px;">Curso de Inglés en Irlanda</h1>
     </div>
   </section>
 
@@ -22,8 +22,8 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
         <div class="content">
           <h2 style="text-align: center;">Fechas disponibles:</h2>
           <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
-            <li class="title-hover"><a href="#FraJune">Junio 2025</a></li>
-            <li class="title-hover"><a href="#FraAug">Agosto 2025</a></li>
+            <li class="title-hover"><a href="#IreMay">Mayo 2025</a></li>
+            <li class="title-hover"><a href="#IreJun">Junio 2025</a></li>
             <li><b><i>¡Escoge la fecha que mejor se adapte a tu agenda y prepárate para una experiencia inolvidable!</i></b></li>
             <li><b><i>¡Recuerda que puedes ir en cualquier fecha del año y el tiempo que decidas!</i></b></li>
           </ul>
@@ -32,23 +32,23 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
             <!-- Imagen estática a la derecha -->
             <div class="image" style="margin-top: 10px;">
               <img 
-                src="/images/fr4.png" 
-                alt="Imagen Curso Francés Francia" 
+                src="/images/ire2.png" 
+                alt="Imagen Curso Inglés Irlanda" 
                 style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);"
                 class="rounded-lg">
             </div>
           </div>
         </div>
 
-    <!-- Sección de Información sobre Curso Junio 2025 -->
-     <h1 id="FraJune"></h1>
+    <!-- Sección de Información sobre Curso Mayo 2025 -->
+     <h1 id="IreMay"></h1>
     <div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" >
       <div class="items-center gap-8 md:grid md:grid-cols-2">
         <!-- Imagen a la izquierda -->
         <div class="image" style="margin-top: 10px;">
           <img 
-            src="/images/fr6.jpg" 
-            alt="Imagen Contacto Curso Alemán Extranjero Junio" 
+            src="/images/ire3.jpg" 
+            alt="Imagen Contacto Curso Irlanda Extranjero Junio" 
             style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);" 
             class="rounded-lg">
         </div>
@@ -56,60 +56,56 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
         <!-- Contenido de texto a la derecha -->
         <div class="content">
           <h3 style="text-align: center;">
-            <b>Curso de verano en Francia para jóvenes y adultos</b>
+            <b>Curso de verano en Irlanda para jóvenes y adultos</b>
           </h3>
-          <h2 style="text-align: center;">Junio 2025</h2>
+          <h2 style="text-align: center;">Mayo 2025</h2>
           <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
             <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
-            <li>Aprende y disfruta durante el mes de junio.</li>
-            <li><span style="color: #0AA8A7; "><b>Inicia: junio 02</b></span></li>
-            <li><span style="color: #0AA8A7; "><b>Fin: julio 18</b></span></li>
-            <li>Curso de 90 horas, 6 semanas de curso.</li>
-            <li>Semana de descanso 23 a 27 de junio*.</li>
-            <li>Centro FLE de prestigio en Institución Universitaria</li>
+            <li>Aprende y disfruta durante el mes de mayo y junio.</li>
+            <li><span style="color: #0AA8A7; "><b>Inicia: mayo 26</b></span></li>
+            <li><span style="color: #0AA8A7; "><b>Fin: junio 20</b></span></li>
+            <li>Curso de 80 horas.</li>
+            <li>Institución universitaria de prestigio y reconocida experiencia</li>
             <li>Visitas de fin de semana</li>
-            <li>* Visita a París, Bruselas y Brujas (semana de descanso)</li>
             <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
-            <li>Recorrido cultural 10 días en (norte de Italia y Toscana)</li>
-            <li><span style="color: #0AA8A7; "><b>Salida: 28 de mayo</b></span></li>
-            <li><span style="color: #0AA8A7; "><b>Regreso: 29 de julio</b></span></li>
+            <li>Recorrido cultural de 13 días (Países Bajos, Bélgica, París y alrededores)</li>
+            <li><span style="color: #0AA8A7; "><b>Salida: 21 de mayo</b></span></li>
+            <li><span style="color: #0AA8A7; "><b>Regreso: 03 de julio</b></span></li>
           </ul>
         </div>
       </div>
     </div>
     
-<!-- Sección de Información sobre Curso Agosto 2025 -->
- <h1 id="FraAug"></h1>
+<!-- Sección de Información sobre Curso Junio/Julio 2025 -->
+ <h1 id="IreJun"></h1>
 <div class="container" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #ccc;" >
   <div class="items-center gap-8 md:grid md:grid-cols-2">
     
     <!-- Contenido de texto a la izquierda -->
     <div class="content">
       <h3 style="text-align: center;">
-        <b>Curso de verano en Francia para jóvenes y adultos</b>
+        <b>Curso de verano en Irlanda para jóvenes y adultos</b>
       </h3>
-      <h2 style="text-align: center;">Agosto 2025</h2>
+      <h2 style="text-align: center;">Junio 2025</h2>
       <ul style="list-style: none; padding: 0; font-size: 1.3em; text-align: justify;">
         <p style="text-align: justify; font-size: 1.2em;"><b>Contenido del curso:</b></p>
-        <li>Disfruta y aprende durante el mes de agosto.</li>
-        <li><span style="color: #0AA8A7; "><b>Inicia: agosto 04</b></span></li>
-        <li><span style="color: #0AA8A7; "><b>Fin: septiembre 19</b></span></li>
-        <li>Curso de 90 horas, 6 semanas de curso.</li>
-        <li>Semana de descanso 25 a 29 de agosto*.</li>
-        <li>Centro FLE de prestigio en Institución Universitaria</li>
+        <li>Disfruta y aprende durante el mes de junio y luio.</li>
+        <li><span style="color: #0AA8A7; "><b>Inicia: junio 16</b></span></li>
+        <li><span style="color: #0AA8A7; "><b>Fin: julio 11</b></span></li>
+        <li>Curso de 80 horas.</li>
+        <li>Institución universitaria de prestigio y reconocida experiencia</li>
         <li>Visitas de fin de semana</li>
-        <li>* Visita a París, Bruselas y Brujas (semana de descanso)</li>
         <p style="text-align: justify; font-size: 1.2em;"><b>Al finalizar el curso:</b></p>
-        <li>Recorrido cultural 10 días en (norte de Italia y Toscana)</li>
-        <li><span style="color: #0AA8A7; "><b>Salida: 30 de julio</b></span></li>
-        <li><span style="color: #0AA8A7; "><b>Regreso: 01 de octubre</b></span></li>
+        <li>Recorrido cultural de 15 días (Países Bajos, Bélgica, París y alrededores)</li>
+        <li><span style="color: #0AA8A7; "><b>Salida: 12 de junio</b></span></li>
+        <li><span style="color: #0AA8A7; "><b>Regreso: 29 de julio</b></span></li>
       </ul>
     </div>
 
     <!-- Imagen a la derecha -->
     <div class="image" style="margin-top: 10px;">
       <img 
-        src="/images/fr2.jpg" 
+        src="/images/ire4.jpg" 
         alt="Imagen Contacto Curso Francés Extranjero Julio" 
         style="box-shadow: 0 6px 12px rgba(0, 0, 0, 0.92);" 
         class="rounded-lg">
